@@ -15,8 +15,6 @@ Short, informal updates and observations as I work through projects and problems
 Spent almost the entire weekend (about 6 hours) trying to get my Pi camera to work.  
 Strangely, the LiDAR setup worked just fine last weekend.
 
----
-
 #### Issues I ran into:
 
 1. **Couldn’t get the default `v4l2` camera driver to work**  
