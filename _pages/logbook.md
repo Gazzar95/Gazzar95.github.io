@@ -5,8 +5,6 @@ layout: single
 author_profile: true
 ---
 
-# Logbook
-
 Short, informal updates and observations as I work through projects and problems.
 
 ---
