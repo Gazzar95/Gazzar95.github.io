@@ -29,5 +29,31 @@ Strangely, the LiDAR setup worked just fine last weekend.
 Still no connection between devices. Might be a deeper ROS 2 discovery or DDS configuration issue.
 
 ---
+
+### **2025-07-22**  
+Still troubleshooting the same networking issue — starting to think the problem might be with the internet router itself. I brought in the GL.iNet mini router to isolate and debug the Pi’s connection.
+
+#### Issues I ran into:
+The Raspberry Pi didn’t appear on the mini router network when connected via Ethernet.  
+At first, it seemed like Ethernet wasn’t working or the Pi wasn’t receiving an IP address.
+
+#### Steps I took to troubleshoot:
+- **Validated Ethernet connection**  
+  Plugged in a laptop to confirm the mini router’s LAN port and cable were good.
+
+- **Diagnosed DHCP/gateway issue**  
+  Laptop didn’t get internet until I manually requested a DHCP lease (`dhclient`) and confirmed routing was working.
+
+- **Tested mini router wireless**  
+  Confirmed internet access via Wi-Fi worked — routing/NAT was functioning properly in Router Mode.
+
+- **Connected to Pi via SSH**  
+  Verified the Pi was online and accessible via upstream network, even if not discoverable from the mini router’s LAN.
+
+- **Confirmed upstream isolation**  
+  Couldn’t ping the main internet router — learned that the mini router’s NAT/firewall blocks upstream pings by default.
+
+Pi Ethernet now seems fine — issue was likely a mix of DHCP and subnet routing quirks.
+
 ---
 
