@@ -55,5 +55,7 @@ At first, it seemed like Ethernet wasn’t working or the Pi wasn’t receiving 
 
 Pi Ethernet now seems fine — issue was likely a mix of DHCP and subnet routing quirks.
 
+**Next:** Set up the Raspberry Pi to reliably connect via Ethernet or Wi-Fi with a static or reserved IP for consistent access during development.
+
 ---
 
