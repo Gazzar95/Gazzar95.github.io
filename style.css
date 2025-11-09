@@ -1,44 +1,52 @@
-/* vertical project rows */
-.project-row {
-    display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: 1.5rem;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.015);
-    border: 1px solid rgba(255, 255, 255, 0.015);
-    border-radius: 1rem;
-    padding: 1.25rem 1.25rem;
-    margin-bottom: 1.5rem;
+:root {
+    --bg: #ffffff;
+    /* bright white background */
+    --text: #222222;
+    /* slightly softer black text */
+    --muted: #555555;
+    /* lighter gray for secondary text */
+    --accent: #007acc;
+    /* subtle blue accent */
+    --wrap: 850px;
+    /* narrow centered column */
 }
 
-.project-img img {
-    width: 100%;
-    border-radius: 0.75rem;
-    display: block;
-    object-fit: cover;
-    background: #111;
-    min-height: 160px;
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
-.project-body h3 {
+h1,
+h2,
+h3 {
+    color: #111;
+    font-weight: 600;
     margin-top: 0;
-    margin-bottom: 0.35rem;
 }
 
-.project-body p {
-    color: var(--text-muted);
-    margin-bottom: 0.6rem;
-}
-
-.project-link {
+a {
     color: var(--accent);
-    font-weight: 500;
-    font-size: 0.8rem;
+    text-decoration: none;
 }
 
-/* mobile */
-@media (max-width: 780px) {
-    .project-row {
-        grid-template-columns: 1fr;
-    }
+a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    background: var(--bg);
+    padding: 4rem 0 3.5rem;
+}
+
+.hero {
+    background: #fafafa;
+    /* faint off-white band for top section */
+}
+
+.alt {
+    background: #fafafa;
 }
