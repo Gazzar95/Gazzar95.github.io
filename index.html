@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Omar El-Gazzar | Robotics & Mechanical Engineer</title>
+    <title>Omar El-Gazzar | Robotics & Mech</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" />
 </head>
 
 <body>
-    <!-- Header / Nav -->
+    <!-- Header -->
     <header class="site-header" id="top">
         <div class="container nav-container">
             <div class="logo">Omar<span>.</span></div>
@@ -20,133 +20,126 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <button class="nav-toggle" aria-label="Open navigation">
-                ☰
-            </button>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <div>
-                <p class="eyebrow">Robotics • Mechatronics • Defense</p>
-                <h1>I'm Omar El-Gazzar.</h1>
-                <p class="subtitle">
-                    Principal Mechanical Engineer transitioning into robotics — ROS 2, Modern Robotics, mobile
-                    manipulators, and autonomy.
-                </p>
-                <div class="hero-actions">
-                    <a class="btn primary" href="#projects">View Projects</a>
-                    <a class="btn ghost" href="#contact">Contact</a>
-                </div>
-                <p class="meta">
-                    Currently in Sunnyvale / Santa Clara • Exploring Bay Area robotics ecosystem
-                </p>
+            <p class="eyebrow">Robotics • ROS 2 • Modern Robotics</p>
+            <h1>Omar El-Gazzar</h1>
+            <p class="subtitle">
+                Mechanical/Defense engineer transitioning into robotics. Building mobile robots,
+                implementing planners, and documenting the journey.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn ghost" href="#contact">Contact</a>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects (vertical flow) -->
     <section class="section" id="projects">
         <div class="container">
             <h2>Projects</h2>
             <p class="section-intro">
-                A snapshot of the robotics path: coursework → simulation → real hardware.
+                Selected work from my robotics transition — sim, ROS 2, and real hardware.
             </p>
-            <div class="grid projects-grid">
-                <!-- Project 1 -->
-                <article class="card">
-                    <h3>Modern Robotics Capstone (CoppeliaSim)</h3>
+
+            <!-- Project 1 -->
+            <article class="project-row">
+                <div class="project-img">
+                    <img src="images/coppeliasim-capstone.jpg" alt="CoppeliaSim capstone" />
+                </div>
+                <div class="project-body">
+                    <h3>Modern Robotics Capstone — youBot Pick & Place</h3>
                     <p>
-                        Implemented trajectory generation, feedback control, and youBot simulation to pick and place
-                        objects in CoppeliaSim using Python.
+                        Implemented the full pipeline: trajectory generation, feedback control, and CSV
+                        output for CoppeliaSim. Simulates a youBot picking a block and placing it at a goal
+                        configuration.
                     </p>
                     <ul class="tags">
                         <li>Python</li>
                         <li>Modern Robotics</li>
                         <li>CoppeliaSim</li>
                     </ul>
-                    <a href="#" class="card-link">View repo →</a>
-                </article>
+                    <a href="https://github.com/Gazzar95" target="_blank" class="project-link">View code →</a>
+                </div>
+            </article>
 
-                <!-- Project 2 -->
-                <article class="card">
+            <!-- Project 2 -->
+            <article class="project-row">
+                <div class="project-img">
+                    <img src="images/ros2-mobile-robot.jpg" alt="ROS 2 mobile robot" />
+                </div>
+                <div class="project-body">
                     <h3>ROS 2 Mobile Robot Build</h3>
                     <p>
-                        Built a differential-drive mobile base (Raspberry Pi + Arduino Nano + Cytron MDDS30) with URDF,
-                        TF tree, and teleop in ROS 2 Humble.
+                        Differential-drive base with Raspberry Pi + Arduino Nano + Cytron driver. URDF +
+                        TF tree verified in RViz, teleop, and parameterized launch files.
                     </p>
                     <ul class="tags">
-                        <li>ROS 2</li>
-                        <li>URDF</li>
+                        <li>ROS 2 Humble</li>
+                        <li>URDF / TF</li>
                         <li>Embedded</li>
                     </ul>
-                    <a href="#" class="card-link">Build log →</a>
-                </article>
+                    <a href="https://gazzar95.github.io" target="_blank" class="project-link">Build log →</a>
+                </div>
+            </article>
 
-                <!-- Project 3 -->
-                <article class="card">
-                    <h3>Motion Planning (PRM / RRT)</h3>
+            <!-- Project 3 -->
+            <article class="project-row">
+                <div class="project-img">
+                    <img src="images/planner.jpg" alt="Motion planning" />
+                </div>
+                <div class="project-body">
+                    <h3>Sampling-based Motion Planning (PRM / RRT)</h3>
                     <p>
-                        Implemented sampling-based planners in Python to navigate a point robot through 2D circular
-                        obstacles, exporting CSV for visualization.
+                        Python implementation to navigate a point robot through 2D circular obstacles,
+                        exporting <code>nodes.csv</code>, <code>edges.csv</code>, and <code>path.csv</code>
+                        for visualization.
                     </p>
                     <ul class="tags">
                         <li>Planning</li>
                         <li>Python</li>
                         <li>Algorithms</li>
                     </ul>
-                    <a href="#" class="card-link">See notebook →</a>
-                </article>
+                    <a href="https://github.com/Gazzar95" target="_blank" class="project-link">Notebook →</a>
+                </div>
+            </article>
 
-                <!-- Project 4 -->
-                <article class="card">
-                    <h3>Defense & Space Mechanisms</h3>
+            <!-- Project 4 -->
+            <article class="project-row">
+                <div class="project-img">
+                    <img src="images/defense-mech.jpg" alt="Defense and space mechanisms" />
+                </div>
+                <div class="project-body">
+                    <h3>Defense & Space Hardware Ownership</h3>
                     <p>
-                        Hardware ownership for actuation subsystems at Northrop Grumman — requirements, DFM, harness
-                        design, and supplier coordination.
+                        Actuation subsystems, DFM, harness design, and supplier coordination at Northrop Grumman.
+                        Relevant to robotics hardware and system integration.
                     </p>
                     <ul class="tags">
                         <li>Mechanical</li>
                         <li>DFM</li>
-                        <li>Defense</li>
+                        <li>Systems</li>
                     </ul>
-                    <a href="#" class="card-link">Resume PDF →</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interests -->
-    <section class="section muted" id="interests">
-        <div class="container">
-            <h2>Focus Areas</h2>
-            <div class="pill-list">
-                <span>Mobile Manipulation</span>
-                <span>ROS 2</span>
-                <span>Computer Vision (2025 plan)</span>
-                <span>Robotics Software</span>
-                <span>Autonomy</span>
-                <span>Embedded Systems</span>
-                <span>DFM for CNC/robot arms</span>
-            </div>
+                    <a href="assets/resume.pdf" target="_blank" class="project-link">Résumé →</a>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- About -->
-    <section class="section" id="about">
+    <section class="section muted" id="about">
         <div class="container about-grid">
             <div>
                 <h2>About</h2>
                 <p>
-                    I'm a mechanical engineer (M.S. Johns Hopkins) working in defense & space who is deliberately
-                    pivoting into robotics. My current multi-year plan combines Northwestern's Modern Robotics
-                    specialization, ROS 2 projects, and hands-on mobile robot hardware.
-                </p>
-                <p>
-                    I like teams that are mission-driven, idea-rich, and collaborative — the kind of culture you see in
-                    good robotics startups.
+                    I'm building a multi-year robotics plan: Northwestern Modern Robotics, ROS 2 projects,
+                    and a mobile manipulator. I like mission-driven, idea-rich teams.
                 </p>
             </div>
             <div class="about-side">
@@ -156,7 +149,7 @@
                     <li><a href="https://gazzar95.github.io" target="_blank">Blog / Build Log</a></li>
                     <li><a href="https://www.linkedin.com/in/omar-el-gazzar-177673127/" target="_blank">LinkedIn</a>
                     </li>
-                    <li><a href="assets/Omar's Resume_V4.docx.pdf" target="_blank">Download Résumé</a></li>
+                    <li><a href="Omar's Resume_V4.docx.pdf" target="_blank">Download Résumé</a></li>
                 </ul>
             </div>
         </div>
@@ -166,9 +159,7 @@
     <section class="section" id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p class="section-intro">
-                Want to talk robotics roles, Bay Area meetups, or ROS projects?
-            </p>
+            <p class="section-intro">Open to robotics/mechatronics roles in the Bay Area.</p>
             <form class="contact-form" netlify>
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -189,7 +180,7 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
-            <p>© <span id="year"></span> Omar El-Gazzar. Built for robotics.</p>
+            <p>© <span id="year"></span> Omar El-Gazzar.</p>
             <a href="#top">Back to top ↑</a>
         </div>
     </footer>
